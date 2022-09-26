@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobSeekerSide.Activities.ApplyActivity">
+
+
+    <ImageView
+        android:id="@+id/applyBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/notificationJob"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_saved_jobs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/designationIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_notifications"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applyBack" />
+
+    <TextView
+        android:id="@+id/designationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Product Designer"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/designationIcon" />
+
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="COmpany Name"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/designationTitle" />
+
+    <ImageView
+        android:id="@+id/locationImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintEnd_toStartOf="@+id/locationTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyName" />
+
+    <TextView
+        android:id="@+id/locationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Product Designer"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/locationImg"
+        app:layout_constraintEnd_toEndOf="@+id/desigenationCard"
+        app:layout_constraintStart_toEndOf="@+id/locationImg"
+        app:layout_constraintTop_toTopOf="@+id/locationImg" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/desigenationCard"
+        style="@style/ShapeAppearanceOverlay.MaterialCardView.Cut"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/locationTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/locationTxt"
+        app:layout_constraintTop_toTopOf="@+id/locationTxt">
+
+        <TextView
+            android:id="@+id/designationTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_margin="3dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Product Designer"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/designationIcon" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/applicantCard"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desigenationCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/applicatnIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_applicants"
+                app:layout_constraintEnd_toEndOf="@+id/applicantTxt"
+                app:layout_constraintStart_toStartOf="@+id/applicantTxt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/applicantTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Applicants"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/applicatnIcon" />
+
+            <TextView
+                android:id="@+id/applicantCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="160"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/applicantTxt"
+                app:layout_constraintStart_toStartOf="@+id/applicantTxt"
+                app:layout_constraintTop_toBottomOf="@+id/applicantTxt" />
+
+
+            //
+
+            <ImageView
+                android:id="@+id/jontypeIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_job_time"
+                app:layout_constraintBottom_toTopOf="@+id/applicantTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.34"
+                app:layout_constraintStart_toEndOf="@+id/applicatnIcon"
+                app:layout_constraintTop_toTopOf="@+id/applicatnIcon" />
+
+            <TextView
+                android:id="@+id/jobtypeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text=" Job type"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/jontypeIcon"
+                app:layout_constraintStart_toStartOf="@+id/jontypeIcon"
+                app:layout_constraintTop_toBottomOf="@+id/jontypeIcon" />
+
+            <TextView
+                android:id="@+id/jobTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Full-time"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/jobtypeTxt"
+                app:layout_constraintHorizontal_bias="0.661"
+                app:layout_constraintStart_toStartOf="@+id/jobtypeTxt"
+                app:layout_constraintTop_toBottomOf="@+id/jobtypeTxt" />
+            //
+
+            <ImageView
+                android:id="@+id/salaryIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_salary"
+                app:layout_constraintBottom_toTopOf="@+id/jobtypeTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.61"
+                app:layout_constraintStart_toEndOf="@+id/jontypeIcon"
+                app:layout_constraintTop_toTopOf="@+id/jontypeIcon" />
+
+            <TextView
+                android:id="@+id/salaryTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Salary"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/salaryIcon"
+                app:layout_constraintStart_toStartOf="@+id/salaryIcon"
+                app:layout_constraintTop_toBottomOf="@+id/salaryIcon" />
+
+            <TextView
+                android:id="@+id/salryRang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="20,000"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/salaryTxt"
+                app:layout_constraintStart_toStartOf="@+id/salaryTxt"
+                app:layout_constraintTop_toBottomOf="@+id/salaryTxt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/jobDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/jobMap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applicantCard">
+
+        <TextView
+            android:id="@+id/jobDespTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_margin="3dp"
+            android:fontFamily="@font/poppinsregular"
+            android:padding="5dp"
+            android:text="Product Designer"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/jobMap"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/jobDescription"
+        app:layout_constraintEnd_toStartOf="@+id/jobCompany"
+        app:layout_constraintStart_toEndOf="@+id/jobDescription"
+        app:layout_constraintTop_toTopOf="@+id/jobDescription">
+
+        <TextView
+            android:id="@+id/jobMapTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_margin="3dp"
+            android:fontFamily="@font/poppinsregular"
+            android:padding="5dp"
+            android:text="  Map  "
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/jobCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/jobMap"
+        app:layout_constraintEnd_toStartOf="@+id/jobReview"
+        app:layout_constraintStart_toEndOf="@+id/jobMap"
+        app:layout_constraintTop_toTopOf="@+id/jobMap">
+
+        <TextView
+            android:id="@+id/jobCompanyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_margin="3dp"
+            android:fontFamily="@font/poppinsregular"
+            android:padding="5dp"
+            android:text="Company"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/jobReview"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/jobCompany"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/jobCompany"
+        app:layout_constraintTop_toTopOf="@+id/jobCompany">
+
+        <TextView
+            android:id="@+id/jobReviewTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_margin="3dp"
+            android:fontFamily="@font/poppinsregular"
+            android:padding="5dp"
+            android:text="Review"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <FrameLayout
+        android:id="@+id/jobFramelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobDescription" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ApplyNow"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/appcolore"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        >
+
+        <TextView
+            android:id="@+id/applyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_margin="3dp"
+            android:fontFamily="@font/poppinsbold"
+            android:padding="5dp"
+            android:text="Apply Now"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
