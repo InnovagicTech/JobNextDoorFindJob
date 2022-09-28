@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.jobnextdoorfindjob.LoginActivity;
 import com.example.jobnextdoorfindjob.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -48,7 +47,7 @@ public class SecondActivity extends AppCompatActivity {
         gcs.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                startActivity(new Intent(SecondActivity.this, LoginActivity.class));
+              //  startActivity(new Intent(SecondActivity.this, LoginActivity.class));
             }
         });
     }

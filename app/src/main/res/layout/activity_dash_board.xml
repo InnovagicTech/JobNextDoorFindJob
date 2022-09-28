@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JobSeekerSide.Activities.DashBoard">
+    android:background="@color/bgColore"
+    tools:context=".DashBoard">
 
 
     <TextView
@@ -39,6 +40,7 @@
         android:layout_marginTop="40dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/cardcolore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jobhint">
@@ -54,6 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_find_a_job__bg_shape_"
                 android:src="@drawable/findjob2" />
 
             <TextView
@@ -77,6 +80,7 @@
         android:layout_marginTop="40dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/cardcolore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findJobCard">

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgColore"
     tools:context=".JobSeekerSide.Fragments.MapFragment">
-
 
 
     <TextView
@@ -13,26 +14,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:layout_margin="3dp"
+
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="About this Job"
+        android:padding="5dp"
+        android:text="Location"
         android:textSize="12dp"
         android:textStyle="bold"
-        android:padding="5dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/mapAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:layout_margin="3dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="About this Job"
-        android:textSize="12dp"
         android:padding="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/mapLocation"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Address here"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapLocation" />
 
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        map:layout_constraintStart_toStartOf="parent"
+        map:uiCompass="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@+id/mapAddress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,12 +12,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.JobNextDoorFindJob">
+        android:theme="@style/Theme.JobNextDoorFindJob.NoActionBar">
         <activity
-            android:name=".JobSeekerSide.Fragments.ReviewFragment"
+            android:name=".JobSeekerSide.Activities.FilterActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".JobSeekerSide.Activities.SavedJobActivity"
             android:exported="false" />
         <activity
-            android:name=".JobSeekerSide.Fragments.CompanyFragment"
+            android:name=".JobSeekerSide.Activities.AppliedActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".JobSeekerSide.Activities.SuccessfulActivity"
+            android:exported="true" />
+        <activity
+            android:name=".JobSeekerSide.Activities.ApplicationTwoActivity"
+            android:exported="true" />
+        <activity android:name=".JobSeekerSide.Activities.ApplicantionOneActivity" />
+        <activity
+            android:name=".JobSeekerSide.Activities.DrawerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JobSeekerSide.Fragments.ReviewFragment"
             android:exported="false" />
         <activity
             android:name=".JobSeekerSide.Fragments.MapFragment"
@@ -26,47 +48,43 @@
             android:name=".JobSeekerSide.Fragments.DescriptionFragment"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.ApplyActivity"
+            android:name=".JobSeekerSide.Activities.ApplyActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.FindJobHome"
+            android:name=".JobSeekerSide.Activities.FindJobHome"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.FindJobSecondprofile"
+            android:name=".JobSeekerSide.Activities.FindJobIntrestSkill"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.FindjobfirstProfile"
+            android:name=".JobSeekerSide.Activities.FirstProfileJobSeeker"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.DashBoard"
+            android:name=".DashBoard"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.SplashActivity"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.EmployerPostApply"
+            android:name=".JobSeekerSide.Activities.EmployerPostApply"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.SeekApplyActivity"
+            android:name=".JobSeekerSide.Activities.SeekApplyActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.EmployerActivity"
+            android:name=".JobSeekerSide.Activities.EmployerActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.JobSeekerSide.Activities.JobSeekerActivity"
-            android:exported="false" />
+            android:name=".JobSeekerSide.Activities.JobSearchActivity"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.jobnextdoorfindjob.LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".LoginActivity"
+            android:exported="true" />
 
         <receiver
             android:name=".JobSeekerSide.Model.NotificationReciver"

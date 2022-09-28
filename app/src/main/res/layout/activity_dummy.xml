@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".JobSeekerSide.Activities.DummyActivity">
 
+    <com.andrognito.patternlockview.PatternLockView
+        android:id="@+id/pattern_lock_view"
+        android:layout_width="280dp"
+        android:layout_height="280dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

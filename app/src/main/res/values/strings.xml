@@ -2,4 +2,13 @@
     <string name="app_name">Job Next Door Find Job</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="dislaimer_text">The information and services are provided to the user with the understanding that “Jobfinder” is not engaged in rendering any legal business or contract to the job seeker or to the employer. The primary purpose of this platform is to connect with each other. Although we make strong efforts to ensure the accuracy of the information provided on this portal.
+We have verified the companies in our best ways. Before going to interview anywhere. Try to investigate it yourself.
+The “Job Next Door Job Find” is not responsible for any error,damage, and fraud.</string>
+
+    <string name="current_location"><u>Use current Location</u>.
+    </string>
 </resources>

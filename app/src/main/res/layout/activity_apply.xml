@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgColore"
     tools:context=".JobSeekerSide.Activities.ApplyActivity">
 
 
     <ImageView
-        android:id="@+id/applyBack"
+        android:id="@+id/applicationBack"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="15dp"
@@ -33,15 +34,15 @@
         android:src="@drawable/ic_notifications"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/applyBack" />
+        app:layout_constraintTop_toBottomOf="@+id/applicationBack" />
 
     <TextView
-        android:id="@+id/designationTitle"
+        android:id="@+id/designationTitleTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
-        android:fontFamily="@font/poppinsregular"
+        android:fontFamily="@font/poppinsbold"
         android:text="Product Designer"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -50,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/designationIcon" />
 
     <TextView
-        android:id="@+id/companyName"
+        android:id="@+id/searchCompanyName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
@@ -61,7 +62,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/designationTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/designationTitleTwo" />
 
     <ImageView
         android:id="@+id/locationImg"
@@ -71,7 +72,7 @@
         android:src="@drawable/ic_location"
         app:layout_constraintEnd_toStartOf="@+id/locationTxt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/companyName" />
+        app:layout_constraintTop_toBottomOf="@+id/searchCompanyName" />
 
     <TextView
         android:id="@+id/locationTxt"
@@ -83,6 +84,7 @@
         android:text="Product Designer"
         android:textSize="18dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/locationImg"
         app:layout_constraintEnd_toEndOf="@+id/desigenationCard"
         app:layout_constraintStart_toEndOf="@+id/locationImg"
@@ -94,6 +96,8 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         app:cardElevation="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/bgColore"
         app:layout_constraintBottom_toBottomOf="@+id/locationTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/locationTxt"
@@ -117,7 +121,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/applicantCard"
+        android:id="@+id/applicantCardTwo"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_marginLeft="20dp"
@@ -153,6 +157,7 @@
                 android:text="Applicants"
                 android:textSize="14dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/applicatnIcon" />
 
@@ -192,6 +197,7 @@
                 android:text=" Job type"
                 android:textSize="14dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/jontypeIcon"
                 app:layout_constraintStart_toStartOf="@+id/jontypeIcon"
                 app:layout_constraintTop_toBottomOf="@+id/jontypeIcon" />
@@ -230,6 +236,7 @@
                 android:text="Salary"
                 android:textSize="14dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/salaryIcon"
                 app:layout_constraintStart_toStartOf="@+id/salaryIcon"
                 app:layout_constraintTop_toBottomOf="@+id/salaryIcon" />
@@ -259,7 +266,7 @@
         app:cardElevation="6dp"
         app:layout_constraintEnd_toStartOf="@+id/jobMap"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/applicantCard">
+        app:layout_constraintTop_toBottomOf="@+id/applicantCardTwo">
 
         <TextView
             android:id="@+id/jobDespTxt"
@@ -269,7 +276,7 @@
             android:layout_margin="3dp"
             android:fontFamily="@font/poppinsregular"
             android:padding="5dp"
-            android:text="Product Designer"
+            android:text="Description"
             android:textStyle="bold" />
     </com.google.android.material.card.MaterialCardView>
 

@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/bgColore"
     android:layout_height="match_parent"
-    tools:context=".JobSeekerSide.Activities.FindjobfirstProfile">
+    tools:context=".JobSeekerSide.Activities.FirstProfileJobSeeker">
 
 
     <ImageView
@@ -26,26 +27,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/prefer"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppinsregular"
+        android:padding="4dp"
         android:text="Prefered Job"
+        android:textColor="@color/black"
         android:textSize="17dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/preferCard"
         app:layout_constraintTop_toBottomOf="@+id/firstImg" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/preferCard"
-        android:layout_width="240dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="285dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/cardcolore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prefer">
@@ -62,28 +66,30 @@
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/expTxt"
-        android:layout_width="match_parent"
+        android:id="@+id/seuccetxt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppinsregular"
+        android:padding="4dp"
+        android:layout_marginTop="15dp"
         android:text="Experience"
-        android:textSize="17dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/expCard"
         app:layout_constraintTop_toBottomOf="@+id/preferCard" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/expCard"
-        android:layout_width="240dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="285dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/cardcolore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expTxt">
+        app:layout_constraintTop_toBottomOf="@+id/seuccetxt">
 
         <Spinner
             android:id="@+id/expSpiner"
@@ -98,24 +104,26 @@
 
     <TextView
         android:id="@+id/eduTxt"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppinsregular"
+        android:padding="4dp"
         android:text="Education"
+        android:textColor="@color/black"
         android:textSize="17dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/eduCard"
         app:layout_constraintTop_toBottomOf="@+id/expCard" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/eduCard"
-        android:layout_width="240dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="285dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/cardcolore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eduTxt">
@@ -131,4 +139,45 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/previouCard"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="@color/buttoncolore"
+        app:cardCornerRadius="360dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="@color/white" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/forwadCardIntrest"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="@color/buttoncolore"
+        app:cardCornerRadius="360dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/homeJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:src="@drawable/ic_next"
+            app:tint="@color/white" />
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

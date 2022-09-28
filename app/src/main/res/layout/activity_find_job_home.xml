@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgColore"
     tools:context=".JobSeekerSide.Activities.FindJobHome">
 
 
@@ -31,10 +32,10 @@
         android:layout_width="0dp"
         android:layout_height="190dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        app:cardBackgroundColor="@color/appcolore"
-        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/buttoncolore"
+        app:cardCornerRadius="14dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,29 +50,54 @@
                 android:id="@+id/c1profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppinsregular"
                 android:text="Complete Your Profile!"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
             <TextView
                 android:id="@+id/c2profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="This will help us to connect you\n with the right project and help \nyou to find dream job!!"
+                android:justificationMode="inter_word"
+                android:text="This will help us to connect you\n with the right project and help \n you to find dream job!!"
                 android:textColor="@color/white"
+                android:textSize="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/c1profile" />
 
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/circularProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="10dp"
+                android:indeterminate="false"
+                android:progress="30"
+                android:scaleX="-1"
+                app:indicatorColor="@color/buttoncolore"
+                app:indicatorSize="110dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/c2profile"
+                app:layout_constraintTop_toTopOf="parent"
+                app:trackColor="@color/white">
+
+            </com.google.android.material.progressindicator.CircularProgressIndicator>
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/progressCard"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="25dp"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="27dp"
                 app:cardCornerRadius="360dp"
                 app:cardElevation="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,12 +111,11 @@
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:fontFamily="@font/poppinsregular"
                     android:text="75%"
-                    android:textColor="@color/appcolore"
+                    android:textColor="@color/buttoncolore"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/c1profile" />
-
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -111,9 +136,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:fontFamily="@font/poppinsregular"
+                    android:fontFamily="@font/poppinsbold"
                     android:text="Complete Now"
-                    android:textColor="@color/appcolore"
+
+                    android:textColor="@color/buttoncolore"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/c1profile" />
 
@@ -127,21 +153,21 @@
         android:id="@+id/topCompTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/poppinsregular"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinsbold"
         android:text="Top Companies"
+        android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/topCompeniesRecycler"
         app:layout_constraintTop_toBottomOf="@+id/profileCard" />
 
     <TextView
         android:id="@+id/seealltxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppinsregular"
         android:text="See All"
         android:textStyle="bold"
@@ -151,56 +177,58 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/topCompeniesRecycler"
         android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topCompTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/topCompTxt"
+        />
 
     <TextView
         android:id="@+id/recentPosttxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:layout_marginRight="12dp"
-        android:fontFamily="@font/poppinsregular"
+        android:fontFamily="@font/poppinsbold"
         android:text="  Recent Jobs"
+        android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/recentJobrecycler"
         app:layout_constraintTop_toBottomOf="@+id/topCompeniesRecycler" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recentJobrecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recentPosttxt" />
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/swtichAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:background="@color/appcolore"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/buttoncolore"
         android:src="@drawable/ic_switch_to_employer"
-        app:backgroundTint="@color/appcolore"
-        app:elevation="5dp"
+        app:backgroundTint="@color/buttoncolore"
+        app:elevation="13dp"
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:tint="@android:color/white" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/eduCard"
-            style="@style/ShapeAppearanceOverlay.MaterialCardView.Cut"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:cardElevation="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/eduCard"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -212,6 +240,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="50dp"
                 android:src="@drawable/ic_home"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/searchJob"
                 app:layout_constraintStart_toStartOf="parent"
@@ -227,14 +256,32 @@
                 app:layout_constraintStart_toStartOf="@+id/homeJob"
                 app:layout_constraintTop_toTopOf="@+id/homeJob" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/swtichAccount1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+            <!--         <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/swtichAccount"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginBottom="40dp"
+                android:background="@color/appcolore"
+                android:src="@drawable/ic_switch_to_employer"
+                app:cardCornerRadius="360dp"
+                app:elevation="122dp"
+                app:cardBackgroundColor="@color/appcolore"
+                app:iconTint="@color/white"
+                app:backgroundTint="@color/appcolore"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@android:color/white" />
+-->
+            <ImageView
+                android:id="@+id/swtichAccount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/appliedJob"
+                app:layout_constraintStart_toStartOf="@+id/searchJob"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
